@@ -12,7 +12,7 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() //Listar los datos
     {
         $categorias = Categoria::all(); //Obtener todas las categorías
         return view('categoria.index')
@@ -24,9 +24,9 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create()//Desplegar la vista para registrar
     {
-        //
+        return view('categoria/registrar');
     }
 
     /**

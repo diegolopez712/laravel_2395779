@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 //Enrutar con categoria
 Route::get('/categoria', [CategoriaController::class, 'index']);
+Route::get('/categoria/crear', [CategoriaController::class, 'create']);
 
 /*
 Route::get('/categoria', function () {
