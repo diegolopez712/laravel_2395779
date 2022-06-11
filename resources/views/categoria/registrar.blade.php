@@ -14,8 +14,13 @@
                 @csrf
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" />
                 </div>
-                <input type="text" id="nombre" name="nombre" />
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <input type="text" id="descripcion" name="descripcion" />
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar</button>
             </form>
         </div>
 </div>

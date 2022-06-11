@@ -35,9 +35,17 @@ class CategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request)//Método para insertar en la tabla
     {
-        //
+        //Llevar los valores de las campos del formulario a un modelo
+        $categoria = new Categoria([
+        'nombre' => $request->get('nombre'),
+        'descripcion' => $request->get('descripcion')
+        ]);
+    
+        $categoria->save(); //Guarda en la tabla de la base de datos.
+        return redirect('/categoria')
+        ->with('success','El producto ha sido guardado');
     }
 
     /**
