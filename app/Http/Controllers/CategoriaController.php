@@ -67,7 +67,10 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Visualizar la vista editar
+         //Consultar por un id con eloquent
+        $categoria = Categoria::findOrFail($id);
+        return view('categoria/editar',compact('categoria')); 
     }
 
     /**
@@ -79,7 +82,18 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //Buscar el registro a editar
+        $categoria = Categoria::findOrFail($id); //Consultar el registro a editar
+
+        //Actualizar los datos en el modelo
+        $categoria->nombre = $request->nombre;
+        $categoria->descripcion = $request->descripcion;
+
+        //Actualizar en la  base de datos.
+        $categoria->update();
+
+        //Redirigir hacia el método index del controlador(Listar)
+        return redirect('/categoria');
     }
 
     /**

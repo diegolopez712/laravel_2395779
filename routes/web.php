@@ -23,7 +23,8 @@ Route::get('/', function () {
 Route::get('/categoria', [CategoriaController::class, 'index']);
 Route::get('/categoria/crear', [CategoriaController::class, 'create']);
 Route::post('/categoria/guardar', [CategoriaController::class, 'store']);
-
+Route::get('/categoria/editar/{id}', [CategoriaController::class, 'edit']);
+Route::put('/categoria/actualizar/{id}', [CategoriaController::class, 'update']);
 /*
 Route::get('/categoria', function () {
     return view('categorias.index');
