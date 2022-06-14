@@ -9,7 +9,7 @@
               Crear
           </a>
         </div>
-        <div class="row">
+        
             <form name="frmRegistrar" method="POST" action="{{ url('/categoria/guardar') }}">
                 @csrf
                 <div class="form-group">
@@ -22,6 +22,6 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Registrar</button>
             </form>
-        </div>
+
 </div>
 @endsection

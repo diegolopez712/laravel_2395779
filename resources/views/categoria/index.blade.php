@@ -49,16 +49,21 @@
                       </td>
 
                       <td class="project-actions text-right">
+                      <form action="{{ url('/categoria/eliminar',$categoria) }}" method="POST">
+                            @csrf
+
                           <a class="btn btn-info btn-sm" href="{{ url('/categoria/editar', $categoria->id) }}">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Editar
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          @method('DELETE')
+                          <button type="submit" class="btn btn-danger btn-sm">
                               <i class="fas fa-trash">
                               </i>
                               Eliminar
-                          </a>
+                          </button>
+                        </form>
                       </td>
                   </tr>
                 @endforeach

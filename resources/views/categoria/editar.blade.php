@@ -9,7 +9,7 @@
               Crear
           </a>
         </div>
-        <div class="row">
+  
             <form name="frmRegistrar" method="POST" action="{{ url('/categoria/actualizar',$categoria->id) }}">
                 @csrf
                 @method('PUT')
@@ -23,6 +23,5 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Actualizar</button>
             </form>
-        </div>
 </div>
 @endsection
